@@ -41,18 +41,18 @@ export function colors(darkMode: boolean): Colors {
     black,
 
     // text
-    text1: darkMode ? '#FFFFFF' : '#0d0e0d',
-    text2: darkMode ? '#C3C5CB' : '#565A69',
-    text3: darkMode ? '#6C7284' : '#888D9B',
-    text4: darkMode ? '#565A69' : '#C3C5CB',
-    text5: darkMode ? '#2C2F36' : '#EDEEF2',
+    text1: darkMode ? '#FFFFFF' : '#FFFFFF',
+    text2: darkMode ? '#FFFFFF' : '#FFFFFF',
+    text3: darkMode ? '#FFFFFF' : '#FFFFFF',
+    text4: darkMode ? '#FFFFFF' : '#FFFFFF',
+    text5: darkMode ? '#FFFFFF' : '#FFFFFF',
 
     // backgrounds / greys
-    bg1: darkMode ? '#1d1f24' : '#fafafa',
-    bg2: darkMode ? '#21409D' : '#F11818',
-    bg3: darkMode ? '#3a3d47' : '#e6e6e8',
-    bg4: darkMode ? '#4c4f5c' : '#CED0D9',
-    bg5: darkMode ? '#6C7284' : '#888D9B',
+    bg1: darkMode ? '#0D0BB1' : '#0D0BB1',
+    bg2: darkMode ? '#1d1f24' : '#0D0BB1',
+    bg3: darkMode ? '#1d1f24' : '#0D0BB1',
+    bg4: darkMode ? '#1d1f24' : '#0D0BB1',
+    bg5: darkMode ? '#1d1f24' : '#0D0BB1',
 
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
@@ -69,7 +69,7 @@ export function colors(darkMode: boolean): Colors {
     primaryText1: darkMode ? '#fff' : '#000',
 
     // secondary colors
-    secondary1: '#3B6A9C',
+    secondary1: '#FFFFFF',
     secondary2: darkMode ? '#17000b26' : '#F6DDE8',
     secondary3: darkMode ? '#17000b26' : '#FDEAF1',
 
@@ -80,7 +80,7 @@ export function colors(darkMode: boolean): Colors {
     green1: '#27AE60',
     yellow1: '#FFE270',
     yellow2: '#F3841E',
-    blue1: '#3B6A9C',
+    blue1: '#fffffC',
   };
 }
 
@@ -174,28 +174,26 @@ export const TYPE = {
 
 export const FixedGlobalStyle = createGlobalStyle`
 html, input, textarea, button {
-  font-family: 'Inter', sans-serif;
+  font-family: none
   font-display: fallback;
 }
-
 html,
 body {
   margin: 0;
   padding: 0;
 }
-
 a {
   color: ${colors(false).blue1};
 }
-
 * {
   box-sizing: border-box;
 }
-
+img {
+  border:solid
+}
 button {
   user-select: none;
 }
-
 html {
   font-size: 18px;
   font-variant: none;
@@ -208,14 +206,13 @@ html {
 
 export const ThemedGlobalStyle = createGlobalStyle`
 html {
-  color: ${({ theme }) => theme.text1};
+  color: rgba(250, 250, 250, 1);
   background-color: ${({ theme }) => theme.bg2};
 }
-
 body {
   min-height: 100vh;
   background-position: 0 -30vh;
   background-repeat: no-repeat;
-  background-image: radial-gradient(50% 50% at 50% 50%,rgb(5 8 10 / 96%) 0%,rgba(250,250,250,0) 100%);
+  background-image: radial-gradient(50% 50% at 50% 50%,rgb(5 8 10 / 96%) 0%,rgba(13,11,177,0) 100%);
 }
 `;
