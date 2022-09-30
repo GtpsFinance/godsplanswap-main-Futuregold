@@ -36,7 +36,6 @@ const CurrencySelect = styled.button`
   border: none;
   padding: 0 0.5rem;
   transition: 0.2s;
-
   :focus,
   :hover {
     background-color: ${({ theme }) => theme.bg4};
@@ -65,7 +64,6 @@ const Aligner = styled.span`
 const StyledDropDown = styled(DropDown)`
   margin: 0 0.25rem 0 0.5rem;
   height: 35%;
-
   path {
     stroke: ${({ theme }) => theme.text1};
     stroke-width: 1.5px;
@@ -93,23 +91,20 @@ const StyledTokenName = styled.span<{ active?: boolean }>`
 const StyledBalanceMax = styled.button`
   padding: 0.5rem;
   background-color: ${({ theme }) => theme.bg3};
-  border: 1px solid ${({ theme }) => theme.bg3};
+  border: 1px solid rgb(2 2 4);
   border-radius: 0.5rem;
   font-size: 0.875rem;
   transition: 0.2s;
-
   font-weight: 500;
   cursor: pointer;
   margin-right: 0.5rem;
-  color: ${({ theme }) => theme.primaryText1};
-
+  color: rgb(250 250 250);
   :hover {
     background-color: ${({ theme }) => theme.primary3};
   }
   :focus {
     outline: none;
   }
-
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     margin-right: 0.5rem;
   `};
